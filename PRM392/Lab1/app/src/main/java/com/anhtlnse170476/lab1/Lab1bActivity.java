@@ -10,6 +10,6 @@ public class Lab1bActivity extends BaseActivity {
         setContentView(R.layout.activity_lab1b);
         setHeaderTitle("Lab 1b - Linear Layout");
 
-        setupNavigation(Lab1aActivity.class, null);
+        setupNavigation(Lab1aActivity.class, Lab2Activity.class);
     }
 }
