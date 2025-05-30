@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:text="Xóa"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/lvList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etInput"
+            app:layout_constraintVertical_bias="0.504" />
+
+        <ListView
+            android:id="@+id/lvList"
+            android:layout_width="332dp"
+            android:layout_height="466dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etInput"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="309dp"
+            android:layout_height="69dp"
+            android:ems="10"
+            android:hint="Enter course name"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:text="Thêm"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etInput"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:text="Cập nhật"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

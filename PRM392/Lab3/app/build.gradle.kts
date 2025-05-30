@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.anhtlnse170476.lab2"
+    namespace = "com.anhtlnse170476.lab3"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.anhtlnse170476.lab2"
+        applicationId = "com.anhtlnse170476.lab3"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.squareup.picasso:picasso:2.71828")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,5 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }

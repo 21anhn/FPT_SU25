@@ -21,7 +21,7 @@ public class Lab21Activity extends BaseActivity {
         setContentView(R.layout.activity_lab2_1);
         initViews();
         setHeaderTitle("Lab 2 - Random Number Generator");
-        setupNavigation(MainActivity.class, null);
+        setupNavigation(MainActivity.class, Lab22Activity.class);
     }
 
     private void initViews() {
@@ -32,21 +32,46 @@ public class Lab21Activity extends BaseActivity {
     }
 
     public void onGenerate(View view) {
-        if (etMin.getText() == null || etMin.getText().toString().isEmpty()) {
-            Toast.makeText(Lab21Activity.this, "Please enter min value!", Toast.LENGTH_SHORT).show();
+        String minStr = etMin.getText() != null ? etMin.getText().toString() : "";
+        String maxStr = etMax.getText() != null ? etMax.getText().toString() : "";
+
+        if (minStr.isEmpty()) {
+            Toast.makeText(this, "Please enter min value!", Toast.LENGTH_SHORT).show();
+            etMin.requestFocus();
             return;
         }
 
-        if (etMax.getText() == null || etMax.getText().toString().isEmpty()) {
-            Toast.makeText(Lab21Activity.this, "Please enter max value!", Toast.LENGTH_SHORT).show();
+        if (maxStr.isEmpty()) {
+            Toast.makeText(this, "Please enter max value!", Toast.LENGTH_SHORT).show();
+            etMax.requestFocus();
             return;
         }
 
-        var min = Integer.parseInt(etMin.getText().toString());
-        var max = Integer.parseInt(etMax.getText().toString());
+        int min, max;
 
+        try {
+            min = Integer.parseInt(minStr);
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Min value must be a valid integer!", Toast.LENGTH_SHORT).show();
+            etMin.requestFocus();
+            return;
+        }
 
-        var result = (int) (Math.random() * (max - min) + min);
+        try {
+            max = Integer.parseInt(maxStr);
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Max value must be a valid integer!", Toast.LENGTH_SHORT).show();
+            etMax.requestFocus();
+            return;
+        }
+
+        if (min > max) {
+            Toast.makeText(this, "Min value must be less than or equal to Max value!", Toast.LENGTH_SHORT).show();
+            etMin.requestFocus();
+            return;
+        }
+
+        int result = (int) (Math.random() * (max - min + 1) + min);
         tvResult.setText(String.valueOf(result));
     }
 }

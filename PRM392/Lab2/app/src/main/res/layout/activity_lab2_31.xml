@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="6dp"
+        android:text="Sign In Form"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Username -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="4dp"
+        android:text="Not Account Yet ? Create one"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="4dp"
+        android:text="----Or----" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8000FF"
+        android:paddingLeft="24dp"
+        android:paddingTop="10dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="10dp"
+        android:text="SIGN IN"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
